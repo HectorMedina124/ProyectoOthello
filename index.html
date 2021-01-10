@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<body>
+	<div class="fondo" id="fondo" style="display: block;">
+		
+			<p class="pensando">Pensando...</p>
+		
+		
+	</div>
+	<div class="padre">
+		<label id="title">Othelo <img src="img/circle.png" width="50px" height="50px"></label>
+	</div>
+	<div class="padre">
+		<label class="label-select">Tipo de juego:</label>
+		<select id="tipoJuego" onchange="mostarSelect();">
+			<option checked>Jugador vs Jugador</option>
+			<option>Jugador vs Maquina</option>
+			<option>Maquina vs Maquina</option>
+		</select>
+	</div>
+	<br>
+	<div style="display: none;" id="contAlgoritmo" class="padre">
+		<label class="label-select">Tipo de algortimo:</label>
+		<select  id="tipoAlgoritmo">
+			<option checked>MinMax</option>
+			<option>MinMax Podaalfa</option>
+			<option>Algortimo genetico</option>
+		</select>
+	</div>
+	<div class="padre">
+			<input type="button" id="start" class="btn" name="" value="Iniciar juego" onclick="JavaScript:iniciarJuego();">
+			<input type="button" id="stop" class="btn" style="display: none;" name="" value="Detener juego" onclick="JavaScript:detenerJuego();">
+	</div>
+	<br>
+	<div id="info-box" style="display: none;">
+		<div class="headerInfo">
+			Informacion de la partida
+			
+		</div>
+		
+		<div id="info">
+			<label id="turno">Turno de:</label>
+			<br>
+			<label id="negras">Fichas Negras restantes:</label>
+			<br>
+			<label id="blancas">Fichas Blancas restantes:</label>
+			<br>
+			<label id="ultFicha">Ultima ficha puesta en:</label>
+		<br>
+			
+		</div>
+		
+		<div class="padre">
+			<label id="winnerTitle">El ganador es:</label>
+		</div>
+		<div class="padre">
+			<label id="winner">Jugador 1</label>
+		</div>
+		
+	</div>
+	<div class="padre">
+		<div id="content">
+			<table border="1px" id="tablero">
+				
+			</table>
+			
+		</div>
+	</div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="js/index.js"></script>
+</html>
